@@ -16,13 +16,25 @@ a {
   color: $pine;
 }
 
+blockquote {
+  box-shadow: $text 3px 0px 0px 0px inset;
+  margin-left: 0px;
+  padding-left: 30px;
+}
+
+pre {
+  background: none !important;
+}
+
 pre code {
   font-family: $fontCode;
   font-size: 75%;
   display: block;
-  background: $overlay;
-  padding: 10px;
+  background: $base;
+  border: 4px solid $overlay;
+  padding: 2rem;
   overflow: auto;
+  border-radius: 1.5rem;
 }
 
 code {

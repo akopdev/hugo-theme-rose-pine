@@ -7,6 +7,11 @@
 <div class="postWrapper">
     <h1>{{ .Title }}</h1>
     <div>
+        {{ if or .Params.Toc $.Site.Params.Toc }}
+         {{ if ne .Params.Toc false }}
+         <aside class="table-of-contents">{{ .TableOfContents }}</aside>
+         {{ end }}
+        {{ end }}
         {{ .Content }}
     </div>
 </div>
