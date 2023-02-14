@@ -1,0 +1,15 @@
+@font-face{
+    font-family: "JetBrains Mono";
+    src: url("../fonts/JetBrainsMono/JetBrainsMono-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Pier Sans";
+    font-display: fallback;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/PierSans/PierSans-Bold.otf") format("opentype");
+}

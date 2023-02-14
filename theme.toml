@@ -1,0 +1,12 @@
+name = "Rosé Pine"
+license = "MIT"
+licenselink = "https://github.com/akopkesheshyan/hugo-theme-rose-pine/blob/master/LICENSE"
+description = "Rosé Pine theme for Hugo"
+homepage = "https://github.com/akopkesheshyan/hugo-theme-rose-pine/"
+tags = ["minimal", "dark", "blog", "sass"]
+features = ["blog", "sass", "dark"]
+min_version = "0.80.0"
+
+[author]
+name = "Akop Kesheshyan"
+homepage = "https://akop.dev"
