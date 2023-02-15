@@ -13,7 +13,12 @@ body {
 }
 
 a {
-  color: $pine;
+  color: $iris;
+  text-decoration: none;
+}
+
+sup a {
+  text-decoration: none;
 }
 
 blockquote {
@@ -28,7 +33,8 @@ pre {
 
 pre code {
   font-family: $fontCode;
-  font-size: 75%;
+  font-size: 0.8em;
+  line-height: 1.4em;
   display: block;
   background: $base;
   border: 4px solid $overlay;
@@ -38,8 +44,44 @@ pre code {
 }
 
 code {
-  font-family: $fontCode;
-  font-size: 75%;
+  font-size: 90%;
+  background: $pine;
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 5px;
+
+  th, td {
+    border: 1px solid $muted;
+    padding: 10px;
+  }
+
+  th {
+    background: $overlay;
+  }
+}
+
+.footnotes {
+  hr {
+    border: 0;
+    height: 1px;
+    background: $muted;
+  }
+  ol {
+    margin: 0 0 0 40px;
+    padding: 0;
+  }
+
+  a.footnote-backref {
+    text-decoration: none
+  }
 }
 
 @for $i from 1 through 6 {

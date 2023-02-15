@@ -2,8 +2,11 @@
 
 .postWrapper {
     text-align: left;
+    a {
+        text-decoration: underline;
+    }
 }
 
 p {
-    margin-top: 2em;
+    margin-top: 1.2em;
 }

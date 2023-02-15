@@ -19,6 +19,10 @@
   display: flex;
   justify-content: center;
   flex-shrink: 0;
+  a {
+    color: $text;
+    text-decoration: none;
+  }
 }
 
 .headerLinks {
@@ -30,8 +34,10 @@
       display: inline;
       margin: 5px;
       a {
-        color: $text;
-        text-decoration: none;
+        color: $subtle;
+        &.active{
+          color: $text;
+        }
       }
     }
   }
