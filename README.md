@@ -13,7 +13,7 @@
 
 ## Install the theme
 
-`git clone https://github.com/akopkesheshyan/hugo-theme-rose-pine themes/rose-pine`
+`git clone https://github.com/akopdev/hugo-theme-rose-pine themes/rose-pine`
 
 ## Configure the theme
 
