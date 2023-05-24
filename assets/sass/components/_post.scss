@@ -10,6 +10,33 @@
     font-size: 0.9em;
   }
 }
+.postTags {
+  white-space: nowrap;
+  text-align: right;
+  margin-left: 1em;
+  a {
+      color: $overlay;
+      background: $gold;
+      text-decoration: none;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 90%;
+      margin-right: 6px;
+  }
+  @media ($phone) {
+    float: none;
+    clear: both;
+    font-size: 0.9em;
+  }
+  &.filter {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 2rem;
+    a {
+      background: $pine;
+    }
+  }
+}
 
 .postTitle {
   color: $rose;
@@ -17,11 +44,13 @@
   text-transform: capitalize;
   font-family: $fontHeader;
   font-size: 1.2em;
-  float: left;
+  text-align: left;
 }
 
 .postHeader {
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 .postsList {
@@ -33,7 +62,18 @@
   background-color: $overlay;
   margin-bottom: 2.5rem;
   border-radius: 1rem;
+  &.compact {
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    .postTitle {
+      font-size: 1.2rem;
+    }
+    .postTags {
+      font-size: 1.2rem;
+    }
+  }
 }
+
 
 .postExcerpt {
   text-align: initial;

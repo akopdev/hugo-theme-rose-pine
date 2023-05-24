@@ -6,6 +6,7 @@
         text-decoration: underline;
     }
     .tags {
+        white-space: nowrap;
         margin-top: -1em;
         a {
             color: $overlay;
