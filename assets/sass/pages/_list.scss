@@ -4,6 +4,20 @@
     text-align: left;
 }
 
+.postListItem {
+    .postCategory {
+        text-align: right;
+        a {
+            color: $love;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 1em;
+            font-size: 1rem;
+        }
+    }
+
+}
+
 .pagination {
     .wrapper {
         display: flex;

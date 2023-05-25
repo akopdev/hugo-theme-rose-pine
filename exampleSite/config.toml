@@ -5,13 +5,15 @@ paginate = 5
 
 [menu]
   [[menu.header]]
-    name = "blog"
-    weight = 0
-    url = "blog"
-  [[menu.header]]
     name = "about"
-    weight = 1
     url = "about"
+  [[menu.header]]
+    name = "posts"
+    url = "posts"
+  [[menu.header]]
+    name = "notes"
+    url = "notes"
+
 
 [params]
 author = "Rose Pine"
