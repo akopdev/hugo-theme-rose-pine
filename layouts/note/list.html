@@ -26,8 +26,8 @@
     {{ end }}
 
     <div>
-        {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "post") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
-        {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "post" }}
+        {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "note") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+        {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "note" }}
         {{ $paginator := .Paginate (where .RegularPages "Type" $contentTypeName) }}
         {{ range $paginator.Pages }}
             <!-- [html-validate-disable-next prefer-native-element] -->

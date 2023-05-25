@@ -1,0 +1,26 @@
+{{ define "title"}}
+{{ .Title }} | {{ .Site.Params.author }}
+{{ end }}
+
+
+{{ define "main" }}
+<div class="postWrapper">
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Params.tags }}
+      <div class="tags">
+        {{ range .Params.tags }}
+          <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+    <div>
+        {{ if or .Params.Toc $.Site.Params.Toc }}
+         {{ if ne .Params.Toc false }}
+         <aside class="table-of-contents">{{ .TableOfContents }}</aside>
+         {{ end }}
+        {{ end }}
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

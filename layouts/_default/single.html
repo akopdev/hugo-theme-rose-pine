@@ -4,23 +4,41 @@
 
 
 {{ define "main" }}
-<div class="postWrapper">
-    <h1>{{ .Title }}</h1>
-
-    {{ if .Params.tags }}
-      <div class="tags">
-        {{ range .Params.tags }}
-          <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">{{ . }}</a>
-        {{ end }}
-      </div>
+<div class="postWrapper post">
+    {{ if .Params.Categories }}
+        <div class="postCategory">
+            {{ range .Params.Categories }}
+            <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
+            {{ end }}
+        </div>
     {{ end }}
-    <div>
-        {{ if or .Params.Toc $.Site.Params.Toc }}
-         {{ if ne .Params.Toc false }}
-         <aside class="table-of-contents">{{ .TableOfContents }}</aside>
-         {{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="postMeta">
+        {{ if not .Params.HideDate }}
+            <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
         {{ end }}
-        {{ .Content }}
+        <span>by {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
     </div>
+
+    {{- /* Featured image */ -}}
+    {{- $image := .Params.featuredimage -}}
+    {{- with .Resources.GetMatch "featured-image" -}}
+        {{- $image = .RelPermalink -}}
+    {{- end -}}
+    {{- with $image -}}
+        <div class="featured-image">
+            {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "img.html" -}}
+        </div>
+    {{- end -}}
+
+    {{- /* Table of contents */ -}}
+    {{ if or .Params.Toc $.Site.Params.Toc }}
+     {{ if ne .Params.Toc false }}
+     <aside class="table-of-contents">{{ .TableOfContents }}</aside>
+     {{ end }}
+    {{ end }}
+
+    {{- /* Content */ -}}
+    {{ .Content }}
 </div>
 {{ end }}

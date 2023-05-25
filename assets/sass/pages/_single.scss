@@ -18,6 +18,26 @@
             margin-right: 6px;
         }
     }
+
+    &.post {
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .postCategory {
+        margin-top: 2rem;
+        a {
+            color: $love;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+    }
+
+    .postMeta {
+        color: $muted;
+    }
 }
 
 p {

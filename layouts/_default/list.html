@@ -31,6 +31,13 @@
                 <div class="postExcerpt">
                     <p>{{ .Summary }}</p>
                 </div>
+                {{ if .Params.Categories }}
+                  <div class="postCategory">
+                      {{ range .Params.Categories }}
+                      <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
+                      {{ end }}
+                  </div>
+                {{ end }}
             </div>
         </a>
         {{end}}
