@@ -17,7 +17,7 @@
         {{ if not .Params.HideDate }}
             <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
         {{ end }}
-        <span>by {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
+        <span>:: {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
     </div>
 
     {{- /* Featured image */ -}}
