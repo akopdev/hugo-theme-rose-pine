@@ -20,7 +20,7 @@
       text-decoration: none;
       padding: 2px 6px;
       border-radius: 5px;
-      font-size: 90%;
+      font-size: 0.9rem;
       margin-right: 6px;
   }
   @media ($phone) {
@@ -32,6 +32,7 @@
     text-align: left;
     margin: 0;
     padding-bottom: 2rem;
+    text-transform: lowercase;
     a {
       background: $pine;
     }
@@ -66,10 +67,11 @@
     padding: 10px 20px;
     margin-bottom: 1rem;
     .postTitle {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     .postTags {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      text-transform: lowercase;
     }
   }
 }
