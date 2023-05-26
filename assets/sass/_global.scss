@@ -8,8 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1rem;
+  line-height: 1.6rem;
   @media ($phone) {
     font-size: 1rem;
     line-height: 1.6rem;
@@ -48,7 +48,7 @@ pre code {
 }
 
 code {
-  font-size: 90%;
+  font-size: 0.9rem;
   background: $pine;
   border-radius: 5px;
   padding: 1px 6px;
