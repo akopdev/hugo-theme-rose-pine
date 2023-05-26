@@ -1,0 +1,11 @@
+{{ define "title"}}
+{{ .Title }} | {{ .Site.Params.author }}
+{{ end }}
+
+
+{{ define "main" }}
+<div class="postWrapper page">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</div>
+{{ end }}

@@ -1,5 +1,5 @@
 +++
 aliases = ["notes"]
-title = "Notes"
+title = "notes"
 +++
 

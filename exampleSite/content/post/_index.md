@@ -1,4 +1,4 @@
 +++
 aliases = ["posts"]
-title = "Posts"
+title = "posts"
 +++
