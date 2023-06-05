@@ -1,0 +1,28 @@
+baseURL: 'http://gohugo.io/'
+languageCode: 'en-us'
+theme: "hugo-theme-rose-pine"
+paginate: 5
+
+menu:
+  header:
+  - name: "about"
+    url: "about"
+  - name: "posts"
+    url: "posts"
+  - name: "notes"
+    url: "notes"
+
+
+params:
+  author: "Rose Pine"
+  user: "hello"
+  hostname: "rose.pine"
+  social:
+  - name: "github"
+    url: "https://github.com/gohugoio"
+  - name: "twitter"
+    url: "https://www.example.com"
+  - name: "linkedin"
+    url: "https://www.example.com"
+  - name: "email"
+    url: "mailto:email@example.com"
