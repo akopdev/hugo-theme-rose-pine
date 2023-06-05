@@ -5,19 +5,18 @@
 
 {{ define "main" }}
 <div class="postWrapper post">
-    {{ if .Params.Categories }}
-        <div class="postCategory">
-            {{ range .Params.Categories }}
-            <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
-            {{ end }}
-        </div>
-    {{ end }}
     <h1>{{ .Title }}</h1>
     <div class="postMeta">
         {{ if not .Params.HideDate }}
-            <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+        <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
         {{ end }}
-        <span>:: {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
+        {{ if .Params.Categories }}
+        <span class="postTerms">
+        {{ range .Params.Categories }}
+        <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
+        {{ end }}
+        </span>
+        {{ end }}
     </div>
 
     {{- /* Featured image */ -}}

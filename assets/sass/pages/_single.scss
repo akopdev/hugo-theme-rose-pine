@@ -37,6 +37,10 @@
 
     .postMeta {
         color: $muted;
+        font-size: 0.9rem;
+        a {
+            font-size: 0.8rem;
+        }
     }
 }
 

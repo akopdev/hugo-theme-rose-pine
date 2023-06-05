@@ -1,0 +1,15 @@
+<div class="postListItem compact" role="listitem">
+  <div class="postHeader">
+    <a href="{{ .Permalink }}" class="postTitle">{{ .Title }}</a>
+  </div>
+  <div class="postMeta">
+    {{ .Lastmod.Format "Jan 2, 2006" }}
+    {{ if .Params.tags }}
+    <span class="postTags">
+      {{ range .Params.tags }}
+      <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">{{ . }}</a>
+      {{ end }}
+    </span>
+    {{ end }}
+  </div>
+</div>

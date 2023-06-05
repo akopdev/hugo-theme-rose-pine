@@ -21,25 +21,27 @@
         {{ $paginator := .Paginate (where .RegularPages "Type" $contentTypeName) }}
         {{ range $paginator.Pages }}
 
-        <a href="{{ .Permalink }}">
             <!-- [html-validate-disable-next prefer-native-element] -->
             <div class="postListItem" role="listitem">
+              <a href="{{ .Permalink }}">
                 <div class="postHeader">
                     <div class="postTitle">{{ .Title }}</div>
-                    <div class="postDate">{{ .Date.Format "January 2, 2006" }}</div>
                 </div>
                 <div class="postExcerpt">
                     <p>{{ .Summary }}</p>
                 </div>
+              </a>
+                <div class="postMeta">
+                {{ .Date.Format "Jan 2, 2006" }}
                 {{ if .Params.Categories }}
-                  <div class="postCategory">
-                      {{ range .Params.Categories }}
-                      <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
-                      {{ end }}
-                  </div>
+                  <span class="postTerms">
+                    {{ range .Params.Categories }}
+                    <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
+                    {{ end }}
+                  </span>
                 {{ end }}
+                </div>
             </div>
-        </a>
         {{end}}
     </div>
     <div class="pagination">
