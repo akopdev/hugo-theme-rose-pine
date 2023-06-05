@@ -1,0 +1,9 @@
+{{- if isset .Site.Taxonomies "tags" }}
+  {{- if not (eq (len .Site.Taxonomies.tags) 0) }}
+  <div class="postTags">
+    {{- range $name, $items := .Site.Taxonomies.tags }}
+    <a class="tags" href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a>
+    {{- end }}
+  </div>
+  {{- end }}
+{{- end }}

@@ -13,7 +13,7 @@
 .postTags {
   text-align: right;
   margin-left: 1em;
-  line-height: 2rem;
+  line-height: 2.2rem;
   a {
     white-space: nowrap;
     color: $overlay;
@@ -29,15 +29,26 @@
     clear: both;
     font-size: 0.9em;
   }
-  &.filter {
-    text-align: left;
-    margin: 0;
-    padding-bottom: 2rem;
-    text-transform: lowercase;
-    a {
-      background: $overlay;
-      color: $muted;
-    }
+}
+
+.postTerms {
+  text-align: right;
+  margin-left: 1em;
+  line-height: 2.2rem;
+  a {
+    white-space: nowrap;
+    color: $overlay;
+    background: $love;
+    text-decoration: none !important;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 6px;
+  }
+  @media ($phone) {
+    float: none;
+    clear: both;
+    font-size: 0.9em;
   }
 }
 
@@ -70,9 +81,20 @@
     .postTitle {
       font-size: 1rem;
     }
-    .postTags {
-      font-size: 1rem;
-      text-transform: lowercase;
+  }
+  .postMeta {
+    text-align: left;
+    color: $muted;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    .postTags, .postTerms {
+      line-height: 1.6rem;
+      a {
+        font-size: 0.8rem;
+      }
     }
   }
 }

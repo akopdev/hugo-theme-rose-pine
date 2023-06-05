@@ -3,6 +3,9 @@ languageCode: 'en-us'
 theme: "hugo-theme-rose-pine"
 paginate: 5
 
+permalinks:
+  notes: /note/:year:month:day
+
 menu:
   header:
   - name: "about"
@@ -26,3 +29,4 @@ params:
     url: "https://www.example.com"
   - name: "email"
     url: "mailto:email@example.com"
+
