@@ -14,4 +14,4 @@ help:
 # server: @ Run a high performance webserver with example site
 # -------------------------------------------------------------------------------------------------
 server:
-	@hugo server --theme ../.. --source exampleSite/
+	@hugo server --theme ../.. --source exampleSite/ --disableFastRender

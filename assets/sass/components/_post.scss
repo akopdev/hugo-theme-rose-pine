@@ -87,6 +87,8 @@
     color: $muted;
     white-space: nowrap;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     text-overflow: ellipsis;
     font-size: 0.8rem;
     line-height: 2rem;
