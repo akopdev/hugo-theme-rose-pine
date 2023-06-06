@@ -3,7 +3,7 @@
     <a href="{{ .Permalink }}" class="postTitle">{{ .Title }}</a>
   </div>
   <div class="postMeta">
-    {{ .Lastmod.Format "Jan 2, 2006" }}
+    {{ .Lastmod.Format "Jan 2, 2006" | default (.Date.Format "Jan 2, 2006") }}
     {{ if .Params.tags }}
     <span class="postTags">
       {{ range .Params.tags }}

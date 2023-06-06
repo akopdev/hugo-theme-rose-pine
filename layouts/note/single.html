@@ -7,13 +7,18 @@
 <div class="postWrapper">
     <h1>{{ .Title }}</h1>
 
-    {{ if .Params.tags }}
-      <div class="tags">
-        {{ range .Params.tags }}
-          <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">{{ . }}</a>
-        {{ end }}
-      </div>
-    {{ end }}
+    <div class="postMeta">
+      {{ if not .Params.HideDate }}
+        <span>{{ .Lastmod.Format "January 2, 2006" | default (.Date.Format "January 2, 2006") }}</span>
+      {{ end }}
+      {{ if .Params.tags }}
+        <span class="postTags">
+          {{ range .Params.tags }}
+            <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">{{ . }}</a>
+          {{ end }}
+        </span>
+      {{ end }}
+    </div>
     <div>
         {{ if or .Params.Toc $.Site.Params.Toc }}
          {{ if ne .Params.Toc false }}
