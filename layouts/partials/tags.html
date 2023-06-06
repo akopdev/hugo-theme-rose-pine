@@ -1,8 +1,13 @@
+{{- $currentPage := . -}}
 {{- if isset .Site.Taxonomies "tags" }}
   {{- if not (eq (len .Site.Taxonomies.tags) 0) }}
   <div class="postTags">
+    {{ with .Site.GetPage "section" "note" }}
+    <a class="tags" href="{{ .RelPermalink }}">All Tags</a>
+    {{ end }}
     {{- range $name, $items := .Site.Taxonomies.tags }}
-    <a class="tags" href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a>
+    {{- $tagURL := printf "tags/%s/" ($name | urlize | lower) | relLangURL }}
+    <a class="tags{{ if (eq $currentPage.RelPermalink $tagURL) }} active{{ end }}" href="{{ $tagURL }}">{{ $name | humanize }}</a>
     {{- end }}
   </div>
   {{- end }}
