@@ -9,6 +9,9 @@ permalinks:
 markup:
   highlight:
     style: "rose-pine"
+    linenos: true
+    anchorlinenos: true
+    noClasses: false
 
 menu:
   header:

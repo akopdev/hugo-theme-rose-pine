@@ -1,5 +1,6 @@
 @import "./utils/variables";
 
+
 body {
   font-family: $fontParagraph;
   color: $text;
@@ -31,29 +32,40 @@ blockquote {
   padding-left: 30px;
 }
 
+.highlight {
+  border: 0.2rem solid $overlay;
+  padding: 0 1rem 0 0.5rem;
+  background-color: $base;
+  border-radius: 1rem;
+
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar:vertical {
+      height: 0.5rem;
+      width: 0.7rem;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+      height: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: $muted;
+      border-radius: 2rem;
+  }
+
+  ::-webkit-scrollbar-track {
+      border-radius: 2rem;  
+      background-color: $base; 
+  }
+
+}
+
 pre {
-  background: none !important;
-}
-
-pre code {
   font-family: $fontCode;
-  font-size: 0.8em;
-  line-height: 1.4em;
-  display: block;
-  background: $base;
-  border: 4px solid $overlay;
-  padding: 2rem;
-  overflow: auto;
-  border-radius: 1.5rem;
 }
-
-code {
-  font-size: 0.9rem;
-  background: $pine;
-  border-radius: 5px;
-  padding: 1px 6px;
-}
-
 
 table {
   table-layout: fixed;
