@@ -19,6 +19,7 @@ body {
 a {
   color: $iris;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 sup{ 
@@ -68,7 +69,7 @@ pre {
   background: none !important;
   code {
     font-family: $fontCode;
-    line-height: 1.8rem;
+    font-size: 0.7rem;
   }
 }
 
