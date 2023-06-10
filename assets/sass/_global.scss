@@ -1,6 +1,5 @@
 @import "./utils/variables";
 
-
 body {
   font-family: $fontParagraph;
   color: $text;
@@ -22,50 +21,63 @@ a {
   text-decoration: none;
 }
 
-sup a {
-  text-decoration: none;
+sup{ 
+  a {
+    text-decoration: none !important;
+    margin-left:0.3rem;
+  }
 }
 
 blockquote {
-  box-shadow: $text 3px 0px 0px 0px inset;
+  border-left: 0.2rem solid $muted;
   margin-left: 0px;
   padding-left: 30px;
+  color: $muted;
 }
-
 .highlight {
-  border: 0.2rem solid $overlay;
-  padding: 0 1rem 0 0.5rem;
-  background-color: $base;
-  border-radius: 1rem;
+   border: 0.2rem solid $overlay;
+   padding: 0 1rem 0 0.5rem;
+   background-color: $base;
+   border-radius: 1rem;
 
-  ::-webkit-scrollbar {
-      -webkit-appearance: none;
-  }
+ ::-webkit-scrollbar {
+     -webkit-appearance: none;
+ }
 
-  ::-webkit-scrollbar:vertical {
-      height: 0.5rem;
-      width: 0.7rem;
-  }
+ ::-webkit-scrollbar:vertical {
+     height: 0.5rem;
+     width: 0.7rem;
+ }
 
-  ::-webkit-scrollbar:horizontal {
-      height: 0.5rem;
-  }
+ ::-webkit-scrollbar:horizontal {
+     height: 0.5rem;
+ }
 
-  ::-webkit-scrollbar-thumb {
-      background-color: $muted;
-      border-radius: 2rem;
-  }
+ ::-webkit-scrollbar-thumb {
+     background-color: $muted;
+     border-radius: 2rem;
+ }
 
-  ::-webkit-scrollbar-track {
-      border-radius: 2rem;  
-      background-color: $base; 
-  }
+ ::-webkit-scrollbar-track {
+     border-radius: 2rem;  
+     background-color: $base; 
+ }
 
 }
-
 pre {
-  font-family: $fontCode;
+  background: none !important;
+  code {
+    font-family: $fontCode;
+    line-height: 1.8rem;
+  }
 }
+
+p code {
+  color: $foam;
+  font-weight: bold;
+  font-family: $fontParagraph;
+}
+
 
 table {
   table-layout: fixed;
@@ -93,10 +105,6 @@ table {
   ol {
     margin: 0 0 0 40px;
     padding: 0;
-  }
-
-  a.footnote-backref {
-    text-decoration: none
   }
 }
 
