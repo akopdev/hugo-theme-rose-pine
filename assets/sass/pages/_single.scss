@@ -39,8 +39,10 @@
       list-style: none;
       margin: 0;
       padding: 0 0 0 1.2rem;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
       li::before {
-        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        content: "\2022";
         color: $rose; 
         font-weight: bold;  
         display: inline-block;
@@ -50,8 +52,10 @@
     }
 
     ol {
-      margin: 0;
-      padding: 0 0 0 2.2rem;
+        margin: 0;
+        padding: 0 0 0 2.2rem;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
     }
 
     .postCategory {
