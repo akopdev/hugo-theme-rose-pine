@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
     @media only screen and (min-width: $breakLarge) {
       width: $width;
     }
@@ -31,7 +32,8 @@
   .menu {
     &-toggle {
       display: none;
-      &:checked + .menu-items {
+
+      &:checked+.menu-items {
         display: block;
       }
     }
@@ -44,6 +46,7 @@
       margin-left: 10px;
       cursor: pointer;
       display: none;
+
       @media ($phone) {
         display: block;
       }
@@ -51,9 +54,11 @@
 
     &-items {
       width: 100%;
+
       @media ($phone) {
         display: none;
       }
+
       ul {
         display: flex;
         align-items: center;
@@ -62,6 +67,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+
         @media ($phone) {
           position: absolute;
           background: $overlay;
@@ -78,13 +84,15 @@
         li {
           display: inline;
           margin: 5px 5px 5px 15px;
+
           @media ($phone) {
             margin: 10px 0;
           }
 
           a {
             color: $subtle;
-            &.active{
+
+            &.active {
               color: $text;
             }
           }
@@ -110,7 +118,15 @@
 }
 
 @keyframes cursor {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

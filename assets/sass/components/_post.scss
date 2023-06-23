@@ -4,16 +4,19 @@
   float: right;
   color: $text;
   text-align: left;
+
   @media ($phone) {
     float: none;
     clear: both;
     font-size: 0.9em;
   }
 }
+
 .postTags {
   text-align: right;
   margin-left: 1em;
   line-height: 2rem;
+
   a {
     white-space: nowrap;
     color: $overlay;
@@ -24,6 +27,7 @@
     font-size: 0.9rem;
     margin-right: 6px;
   }
+
   @media ($phone) {
     float: none;
     clear: both;
@@ -35,6 +39,7 @@
   text-align: right;
   margin-left: 1em;
   line-height: 2.2rem;
+
   a {
     white-space: nowrap;
     color: $overlay;
@@ -45,6 +50,7 @@
     font-size: 0.9rem;
     margin-right: 6px;
   }
+
   @media ($phone) {
     float: none;
     clear: both;
@@ -75,12 +81,15 @@
   background-color: $overlay;
   margin-bottom: 2.5rem;
   border-radius: 1rem;
+
   &.compact {
     margin-bottom: 1rem;
+
     .postTitle {
       font-size: 1rem;
     }
   }
+
   .postMeta {
     text-align: left;
     color: $muted;
@@ -91,8 +100,11 @@
     text-overflow: ellipsis;
     font-size: 0.8rem;
     line-height: 2rem;
-    .postTags, .postTerms {
+
+    .postTags,
+    .postTerms {
       line-height: 2rem;
+
       a {
         font-size: 0.8rem;
       }

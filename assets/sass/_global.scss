@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   font-size: 1rem;
   line-height: 1.6rem;
+
   @media ($phone) {
     font-size: 1rem;
     line-height: 1.6rem;
@@ -22,10 +23,10 @@ a {
   overflow-wrap: anywhere;
 }
 
-sup{ 
+sup {
   a {
     text-decoration: none !important;
-    margin-left:0.3rem;
+    margin-left: 0.3rem;
   }
 }
 
@@ -35,38 +36,41 @@ blockquote {
   padding-left: 30px;
   color: $muted;
 }
+
 .highlight {
-   border: 0.2rem solid $overlay;
-   padding: 0 1rem 0 0.5rem;
-   background-color: $base;
-   border-radius: 1rem;
+  border: 0.2rem solid $overlay;
+  padding: 0 1rem 0 0.5rem;
+  background-color: $base;
+  border-radius: 1rem;
 
- ::-webkit-scrollbar {
-     -webkit-appearance: none;
- }
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
 
- ::-webkit-scrollbar:vertical {
-     height: 0.5rem;
-     width: 0.7rem;
- }
+  ::-webkit-scrollbar:vertical {
+    height: 0.5rem;
+    width: 0.7rem;
+  }
 
- ::-webkit-scrollbar:horizontal {
-     height: 0.5rem;
- }
+  ::-webkit-scrollbar:horizontal {
+    height: 0.5rem;
+  }
 
- ::-webkit-scrollbar-thumb {
-     background-color: $muted;
-     border-radius: 2rem;
- }
+  ::-webkit-scrollbar-thumb {
+    background-color: $muted;
+    border-radius: 2rem;
+  }
 
- ::-webkit-scrollbar-track {
-     border-radius: 2rem;  
-     background-color: $base; 
- }
+  ::-webkit-scrollbar-track {
+    border-radius: 2rem;
+    background-color: $base;
+  }
 
 }
+
 pre {
   background: none !important;
+
   code {
     font-family: $fontCode;
     font-size: 0.8rem;
@@ -88,7 +92,8 @@ table {
   margin: 40px 0;
   border-radius: 5px;
 
-  th, td {
+  th,
+  td {
     border: 1px solid $muted;
     padding: 10px;
   }
@@ -104,6 +109,7 @@ table {
     height: 1px;
     background: $muted;
   }
+
   ol {
     margin: 0 0 0 40px;
     padding: 0;
@@ -117,6 +123,6 @@ table {
   }
 }
 
-@-ms-viewport{
+@-ms-viewport {
   width: device-width;
 }
