@@ -1,5 +1,10 @@
 <footer class="footer">
     &copy; {{ now.Year }} {{ .Site.Params.author }}, Built with
     <a href="https://gohugo.io" class="footerLink">Hugo</a> and
-    <a href="https://github.com/akopkesheshyan/hugo-theme-rose-pine" class="footerLink">Rose Pine</a> theme
+    <a href="https://github.com/akopdev/hugo-theme-rose-pine" class="footerLink">Rose Pine</a> theme
 </footer>
+
+{{ if (findRE "<pre" .Content 1) }}
+    {{ $jsCopy := resources.Get "js/copy-code.js" | minify }}
+    <script src="{{ $jsCopy.RelPermalink }}"></script>
+{{ end }}

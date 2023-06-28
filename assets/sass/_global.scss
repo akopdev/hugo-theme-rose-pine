@@ -38,6 +38,7 @@ blockquote {
 }
 
 .highlight {
+  position: relative;
   border: 0.2rem solid $overlay;
   padding: 0 1rem 0 0.5rem;
   background-color: $base;

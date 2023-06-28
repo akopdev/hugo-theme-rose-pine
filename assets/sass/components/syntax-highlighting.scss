@@ -439,3 +439,39 @@
 
 /* TextWhitespace */
 .chroma .w {}
+
+.copy-code-button {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $text;
+  background-color: $overlay;
+  border: 1px solid $overlay;
+  border-top-left-radius: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:hover {
+    color: $base;
+    background-color: $subtle;
+    opacity: 0.8;
+  }
+}
+
+.copyable-text-area {
+  position: absolute;
+  height: 0;
+  z-index: -1;
+  opacity: 0.01;
+}
